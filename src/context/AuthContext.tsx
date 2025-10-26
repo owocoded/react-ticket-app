@@ -1,9 +1,9 @@
 // src/context/AuthContext.tsx
-import React, {
+import {
   createContext,
   useContext,
   useState,
-  ReactNode,
+  type ReactNode,
   useEffect,
 } from "react";
 import { useNavigate } from "react-router-dom";

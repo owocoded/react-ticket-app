@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { useTickets } from "../context/TicketContext";
 import { useToast } from "../context/ToastContext";
 import type { Ticket } from "../context/TicketContext";

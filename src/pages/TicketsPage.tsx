@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { useAuth } from '../context/AuthContext';
 import { useTickets } from '../context/TicketContext';
 
 interface Ticket {
@@ -13,8 +11,6 @@ interface Ticket {
 }
 
 const TicketsPage: React.FC = () => {
-  const navigate = useNavigate();
-  const { logout } = useAuth();
   const { tickets, createTicket, updateTicket, deleteTicket } = useTickets();
   const [filteredTickets, setFilteredTickets] = useState<Ticket[]>(tickets);
   const [statusFilter, setStatusFilter] = useState('');
@@ -30,10 +26,7 @@ const TicketsPage: React.FC = () => {
   });
   const [errors, setErrors] = useState<Record<string, string>>({});
 
-  const handleLogout = () => {
-    logout();
-    navigate('/');
-  };
+
 
   useEffect(() => {
     let result = tickets;

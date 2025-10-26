@@ -1,11 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-import { useAuth } from '../context/AuthContext';
+import { Link } from 'react-router-dom';
 import { useTickets } from '../context/TicketContext';
 
 const Dashboard: React.FC = () => {
-  const navigate = useNavigate();
-  const { logout } = useAuth();
   const { tickets } = useTickets();
   const [openTickets, setOpenTickets] = useState(0);
   const [inProgressTickets, setInProgressTickets] = useState(0);

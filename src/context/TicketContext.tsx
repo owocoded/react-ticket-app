@@ -2,7 +2,7 @@ import React, {
   createContext, 
   useContext, 
   useState, 
-  ReactNode, 
+  type ReactNode, 
   useEffect 
 } from "react";
 import { useToast } from "./ToastContext";
